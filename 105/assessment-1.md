@@ -17,6 +17,7 @@ The "high" or "low" levels refer to levels of abstraction; if a programming lang
 **JavaScript was designed to be flexible with values and types, often jumping back and forth between them. Compare some pros and cons of this decision. How might it help you? How might it get in the way?**
 
 If you wanted to make sure a user actually entered something as input, you could use the comparison operators to do it (by comparing the string to a boolean value); an empty string would return `false`, and a filled string would return `true`.
-If a user failed to enter anything at all and you wanted to do a math operation on it, it would still work with `null` because it's in the place of 0.
+
+And if a user failed to enter anything at all and you wanted to do a math operation on it, it would still work with `null` because it's in the place of 0.
 
 But if you wanted to take user input--a string reading "6"--and add it to a preset integer, 12, it will not work as a math operation. `console.log("6" + 12)` or `console.log(6+"12")` would output `612` because the program read the input number as a string and decided to concatenate it instead of adding it. In order for the code to work as intended, you'd need to manually cast the string as an integer/number.
