@@ -1,5 +1,7 @@
 **After two weeks, what do you think is going to be your biggest challenge with this program? And how will you try to overcome it?** <br>
-I like writing notes, but I don't like studying them, which will become a problem when I have to make much larger programs. I don't want to be flipping through a million pages just to get one program done. I need to study things more--ideally every day, even if I'm just skimming them.
+I like writing notes, but I don't like studying them, which will become a problem when I have to make much larger programs. I don't want to be flipping through a million pages just to get one program done. I need to study things more--ideally every day, even if I'm just skimming them.<br>
+I should also check my assignments more often--or the course pages, at least, because I haven't really been doing that as much as I probably should be. I want to make sure I submit everything I need to.<br>
+And I need to use the "extra resources" links because I have not clicked a single one of them so far. And I'm kind of bored already because I know most of this stuff so far, so maybe I should take time to, I dunno, learn new stuff on my own? Cuz it's not like I have anything better to do.
 
 **Describe the differences between the three styles of loops: for, while, and do...while.**<br>
 A while loop takes just one expression; counters and stuff need to go in the loop body if you want to have them.<br>
