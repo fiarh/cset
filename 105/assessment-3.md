@@ -20,3 +20,15 @@ Also, there's really no need to repeat a thousand lines of code if it can be con
 I liked the one-way mirror analogy; stuff in the local scopes can see outside their blocks into the outer scopes, but the outer scopes can't see in.
 <br>
 The local scopes are the enclosures where the animals are held. They can move around inside their enclosures and see stuff outside them, but the people outside (in the global scope) can't interact directly with them.
+<br><br>
+```
+let humans = "humans" //Global scope. They're outside the enclosures.
+
+const animals = function() {
+  let animals = "tiger"; //Tigers are inside their own enclosures.
+}
+
+const animals2 = function() {
+  let animals = "lion"; //Lions are inside their own enclosures, and they can't interact w/ the tigers.
+}
+```
