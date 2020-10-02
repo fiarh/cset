@@ -24,7 +24,7 @@ I'd make class selectors and then add them to the elements; if all options use t
 etc.
 ```
 <br/>
-<br/>
+
 **Style rules sometimes conflict with each other, especially in large projects. Explain the difference between cascade, inheritance, and specificity and how you can use these concepts to organize your CSS.**<br/>
 Cascade: The browser reads the document from top to bottom, applying styles to the page in the order it reads them. If p {color: red;} comes *after* p {color:blue;}, a paragraph in the HTML page will end up red.<br/>
 Inheritance: Some properties are passed down from parent to child elements while others are not, so if I wanted to make one word in a paragraph a different color or font from the rest of the text, I could use the span tag within the HTML document itself.<br/>
