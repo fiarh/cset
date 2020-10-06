@@ -1,0 +1,115 @@
+:root {
+	/* The use of -- indicates custom properties. You name them yourself, and you can use them by putting them inside var(). */
+	--background-color: #212121; /* dark grey */
+	--border-lights: #99FFFF; /* white-cyan */
+	--main-text-color: #00D7D7; /* pretty much cyan */
+	--shadow-text-color: #008686; /* dark cyan */
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+body {
+	font-family: monospace, 'Courier New', Courier, monospace;
+	background-color: var(--background-color);
+}
+
+
+div.stand-out {
+	color: var(--border-lights);
+	width: 40%;
+	border: 5px solid var(--border-lights);
+	padding: 2px;
+	margin: 0 auto; /* This line centers the div! */
+	text-align: center;
+	/*box-shadow: h-offset v-offset blur-spread color*/
+	box-shadow: 0px 0px 50px var(--shadow-text-color), 0px 0px 50px var(--shadow-text-color) inset;
+}
+
+img {
+	display: block;
+}
+
+div.stand-out-left {
+	float: left;
+	color: var(--border-lights);
+	width: 50%;
+	border: 5px solid var(--border-lights);
+	padding: 2px;
+	margin: 0 auto; /* This line centers the div! */
+	text-align: center;
+	/*box-shadow: h-offset v-offset blur-spread color*/
+	box-shadow: 0px 0px 50px var(--shadow-text-color), 0px 0px 50px var(--shadow-text-color) inset;
+}
+
+div.stand-out-right {
+	float: right;
+	color: var(--border-lights);
+	width: 40%;
+	border: 5px solid var(--border-lights);
+	padding: 2px;
+	margin: 0 auto; /* This line centers the div! */
+	text-align: center;
+	/*box-shadow: h-offset v-offset blur-spread color*/
+	box-shadow: 0px 0px 50px var(--shadow-text-color), 0px 0px 50px var(--shadow-text-color) inset;
+}
+
+div.stand-out-less {
+	color: var(--border-lights);
+	width: 50%;
+	text-align: center;
+	margin: 0 auto; /* This line centers the div! */
+	padding: 2px 2px 2px 2px;
+	/*box-shadow: h-offset v-offset blur-spread color*/
+}
+
+div.stand-out-less-left {
+	float: left;
+	color: var(--border-lights);
+	width: 50%;
+	margin: 0 auto; /* This line centers the div! */
+	padding: 2px 2px 2px 2px;
+	/*box-shadow: h-offset v-offset blur-spread color*/
+	box-shadow: 0px 0px 50px var(--shadow-text-color);
+}
+
+div.stand-out-less-right {
+	float: right;
+	color: var(--border-lights);
+	width: 40%;
+	margin: 0 auto; /* This line centers the div! */
+	padding: 5px;
+	/*box-shadow: h-offset v-offset blur-spread color*/
+	box-shadow: 0px 0px 50px var(--shadow-text-color);
+}
+
+h4 {
+	font-size: 30px;
+	text-shadow: 3px 3px 5px var(--shadow-text-color);
+}
+
+p {
+	color: var(--main-text-color);
+}
+
+ul {
+	list-style: none;
+	color: var(--main-text-color);
+}
+
+li {
+	margin: 1em;
+	color: var(--main-text-color);
+}
+
+a:link {
+	color: var(--main-text-color);
+}
+
+a:visited {
+	color: var(--shadow-text-color);
+}
