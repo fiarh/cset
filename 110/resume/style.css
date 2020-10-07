@@ -1,0 +1,72 @@
+:root {
+	/* The use of -- indicates custom properties. You name them yourself, and you can use them by putting them inside var(). */
+	--background-color: #0B072E; /* deep blue */
+	/* These are blue lights */
+	--border-lights1: #99FFFF; /* white-cyan */
+	--main-text-color1: #00D7D7; /* cyan-ish */
+	--shadow-text-color1: #008686; /* dark cyan */
+	/* These are pink lights */
+	--border-lights2: #FFCFEC; /* white-pink */
+	--main-text-color2: #FF6BC5; /* pink */
+	--shadow-text-color2: #FF0099; /* dark pink */
+}
+
+img {
+	display: block;
+}
+
+body {
+	font-family: monospace, 'Courier New', Courier, monospace;
+	background-color: var(--background-color);
+}
+
+a:link {
+	color: #CCA9FF;
+}
+
+a:visited {
+	color: #5800DA;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+div.stand-out1 {
+	color: var(--border-lights1);
+	width: 40%;
+	border: 5px solid var(--border-lights1);
+	padding: 2px;
+	margin: 0 auto; /* This line centers the div! */
+	text-align: center;
+	/*box-shadow: h-offset v-offset blur-spread color*/
+	box-shadow: 0px 0px 50px var(--shadow-text-color1), 0px 0px 50px var(--shadow-text-color1) inset;
+}
+
+div.stand-out-less1 {
+	color: var(--main-text-color1);
+	margin: 0 auto; /* This line centers the div! */
+	padding: 2px 2px 2px 2px;
+	/*box-shadow: h-offset v-offset blur-spread color*/
+}
+
+div.stand-out2 {
+	color: var(--border-lights2);
+	width: 40%;
+	border: 5px solid var(--border-lights2);
+	padding: 2px;
+	margin: 0 auto; /* This line centers the div! */
+	text-align: center;
+	/*box-shadow: h-offset v-offset blur-spread color*/
+	box-shadow: 0px 0px 50px var(--shadow-text-color2), 0px 0px 50px var(--shadow-text-color2) inset;
+}
+
+div.stand-out-less2 {
+	color: var(--main-text-color2);
+	margin: 0 auto; /* This line centers the div! */
+	padding: 2px 2px 2px 2px;
+	/*box-shadow: h-offset v-offset blur-spread color*/
+}
