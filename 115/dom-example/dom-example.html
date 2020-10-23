@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+    	<title>Simple DOM example</title>
+		<style>
+			.highlight {
+				color: white;
+				background-color: black;
+				padding: 10px;
+				width: 250px;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section>
+    	<img src="neon-astronaut.jpg" alt="Blue neon sign in the shape of an astronaut" width="200px"/>
+		<p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+     	</section>
+
+
+
+		<script>
+			const link = document.querySelector("a");
+			link.textContent = "Mozilla Developer Network";
+			link.href = "https://developer.mozilla.org";
+
+			const sect = document.querySelector("section");
+
+			const para = document.createElement("p");
+			para.textContent = "Yeah I'm riding through the AY-REE-UH";
+			para.setAttribute("class", "highlight");
+			sect.appendChild(para);
+
+			const text = document.createTextNode(" in a car that's made of f--kin' bird feathers and pleather seats");
+
+			const linkPara = document.querySelector("p + p");
+			linkPara.appendChild(text);
+
+		</script>
+  	</body>
+</html>
