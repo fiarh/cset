@@ -35,6 +35,7 @@ let sceneList = [
 	},
 
 	{ // START/opening scene
+		choiceID: "START",
 		writtenScene: (`
 
 	-- -- --
@@ -54,11 +55,7 @@ let sceneList = [
 	},
 
 	{ // ASK what's going on
-		writtenScene: ,
-		choices: ,
-	},
-
-	{ // I don't know WHAT you're talking about
+		choiceID: "ASK",
 		writtenScene: (`
 
 	-- -- --
@@ -78,6 +75,7 @@ let sceneList = [
 	},
 
 	{ // NO ONE sent me
+		choiceID: "NO ONE",
 		writtenScene: (`
 
 	-- -- --
@@ -87,6 +85,7 @@ let sceneList = [
 	},
 
 	{ // Stay SILENT
+		choiceID: "SILENT",
 		writtenScene: (`
 
 	-- -- --
@@ -102,6 +101,7 @@ let sceneList = [
 	},
 
 	{ // TELL ME
+		choiceID: "TELL ME",
 		writtenScene: (`
 
 	-- -- --
@@ -119,6 +119,7 @@ let sceneList = [
 	},
 
 	{ // The reveal
+		choiceID: "WHAT",
 		writtenScene: (`
 
 	-- -- --
@@ -144,6 +145,7 @@ let sceneList = [
 	},
 
 	{ // My TYPE
+		choiceID: "TYPE",
 		writtenScene: (`
 
 	-- -- --
@@ -163,6 +165,7 @@ let sceneList = [
 	},
 
 	{ // get shot
+		choiceID: "YES",
 		writtenScene: (`
 
 	-- -- --
@@ -208,4 +211,23 @@ let sceneList = [
 	},
 ];
 
-// Call each scene by its INDEX number. Use one function for written scene, one for displaying choices, and one for taking the player to a new scene.
+// Call each scene by its INDEX number. Use one function for written scene and choice display.
+const showScene = function(index) {
+	console.log(sceneList[index].writtenScene);
+	for (let element of sceneList[index].choices) {
+		console.log(">> " + element);
+	}
+	userChoice = prompt("");
+};
+
+// One function for taking user to new scene
+const newScene = function(userChoice) {
+	for (let scene of sceneList) {
+		if (scene.choiceID == userChoice) {
+			showScene(sceneList.indexOf(scene));
+		}
+	}
+};
+
+showScene(0);
+newScene("START");
