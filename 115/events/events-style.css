@@ -1,0 +1,14 @@
+/* Buttons for normal times */
+button {
+	width: 100px;
+	height: 50px;
+	background-color: white;
+	border: 1px solid black;
+}
+
+/* Buttons for clicky times */
+button.clicked {
+	background-color: salmon;
+	color: crimson;
+	border: 1px solid crimson;
+}
