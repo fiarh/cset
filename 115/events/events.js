@@ -5,15 +5,15 @@ let clickCountDisplay = document.querySelector("p.counter");
 // Make an array of things the button will say.
 let buttonResponses = [
 	"CLICK ME",
-	"harder ( ͡° ͜ʖ ͡°)",
+	"WEE WOO",
 	"click click click click",
 	"We're all just clicking through the hyperlinks of life",
-	"what--doth--life?",
+	"What--doth--life?",
 	"If the computer virus is infecting people, then I need to get a human virus to infecticide--the computer--",
 	"That's the spice",
 	"It's clicking time",
 	"Hello and welcome to the Mountain Dort Report",
-	"Give me money, and I'll predict your future",
+	"Give me your money, and I'll predict your future",
 ];
 
 let clickCount = 0;
@@ -64,7 +64,6 @@ function changeButtonColor() {
 
 	// Light color for button background
 	button.style.background = "rgb(" + redValueLight + "," + greenValueLight + "," + blueValueLight + ")";
-
 
 	// Dark color for border and text
 	button.style.color = darkColor;
