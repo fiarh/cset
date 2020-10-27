@@ -74,3 +74,4 @@ function changeButtonColor() {
 // Only execute the changes when the button is clicked.
 button.addEventListener("click", changeButtonText);
 button.addEventListener("click", changeButtonColor);
+button.addEventListener("click", clickCounter);
