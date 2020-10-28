@@ -18,11 +18,6 @@ let buttonResponses = [
 
 let clickCount = 0;
 
-let redValueLight;
-let greenValueLight;
-let blueValueLight;
-let darkColor;
-
 // Define how the button should change.
 function changeButtonText() {
 	// Pick a random string from the array and display it.
@@ -43,35 +38,37 @@ function clickCounter () {
 
 // This is a sort-of-mathematical way to change the button colors randomly.
 function changeButtonColor() {
-	// Generate 3 numbers between 120 and 255. Make sure there is always a maximum value!
-	// Set R to one number.
-	redValueLight = Math.floor((Math.random() * (255 - 120) + 120));
-	// Set G to one number.
-	greenValueLight = Math.floor((Math.random() * (255 - 120) + 120));
-	// Set B to one number.
-	blueValueLight = Math.floor((Math.random() * (255 - 120) + 120));
 
-	//Whichever value is biggest, take that one, bump it down to 150 it for the dark color, and set the other two values to zero.
-	if ((redValueLight > greenValueLight) && (redValueLight > blueValueLight)) {
+	let lightColor;
+	let darkColor;
+
+	let colorArray = [];
+
+	// Setting background color
+	for (index = 0; index < 3; index++) { // sets each value of red, green, and blue
+		colorArray.push(Math.floor((Math.random() * (255 - 120) + 120)));
+		}
+	lightColor = "rgb(" + colorArray[0] + ", " + colorArray[1] + ", " + colorArray[2] + ")";
+	button.style.background = lightColor;
+
+	// Whichever value is biggest, take that one, bump it down to 140 it for the dark color, and set the other two values to zero.
+	if ((colorArray[0] > colorArray[1]) && (colorArray[0] > colorArray[2])) {
 		darkColor = "rgb(140,0,0)";
-	} else if ((blueValueLight > greenValueLight) && (blueValueLight > redValueLight)) {
+	} else if ((colorArray[2] > colorArray[1]) && (colorArray[2] > colorArray[0])) {
 		darkColor = "rgb(0,0,140)";
-	} else if ((greenValueLight > blueValueLight) && (greenValueLight > redValueLight)) {
+	} else if ((colorArray[1] > colorArray[2]) && (colorArray[1] > colorArray[0])) {
 		darkColor = "rgb(0,140,0)";
 	} else {
 		darkColor = "black";
 	}
 
-	// Light color for button background
-	button.style.background = "rgb(" + redValueLight + "," + greenValueLight + "," + blueValueLight + ")";
-
-	// Dark color for border and text
+	// Dark color for button border and text
 	button.style.color = darkColor;
 	button.style.border = "2px solid " + darkColor;
 
 }
 
-// Only execute the changes when the button is clicked.
+// Only execute these changes when the button is clicked.
 button.addEventListener("click", changeButtonText);
 button.addEventListener("click", changeButtonColor);
 button.addEventListener("click", clickCounter);
